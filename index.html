@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>DOM Manipulations Assignment</title>
+</head>
+
+
+
+<script type="text/javascript">
+	// 2 Implement an “onmouseover” event on a Paragraph such that, whenever a mouse is pointing on this Paragraph - it should change its text color to RED. 
+
+	function ms() {
+		document.getElementById('abc').style.color= 'red';
+	}
+
+
+
+// 3  And Implement an “onmouseout” event on a Paragraph such that, whenever a mouse STOPs pointing on this Paragraph - it should change its text color to BLACK.
+
+	function mt() {
+		document.getElementById('abc').style.color= 'black';
+	}
+
+// 5 Implement an “onmouseover” event on a Button such that, whenever a mouse is pointing on this Button - it should change its own innerHTML.
+	function mo(){
+		document.getElementById('xyz').innerHTML="changed";
+	}
+
+
+// 6 Implement an “onmouseout” event on a Button such that,  whenever a mouse STOPs pointing on this Button - it should change its innerHTML back to the original.
+	function mso(){
+		document.getElementById('xyz').innerHTML="click Here";
+	}
+	//  8 Implement an “onclick” event on a Button such that, whenever a user clicks on this Button - it should assign Paragraph.innerHTML to the Input-Textbox.value 
+
+	function oc(){
+		document.getElementById('qqq').value=document.getElementById('abc').innerHTML;
+	}
+
+
+// 10. Implement an “onmouseover” and an “onmouseout” event such that, whenever a mouse is pointing to the specific list-item it should change its text color and make the font bold. And when a mouse STOPs pointing the list-item should text color and the font style should be restored to the original.
+
+
+	function lt() {
+		document.getElementById('lst').style.color= 'pink';
+		document.getElementById('lst').style.fontWeight='bold';
+	}
+
+
+	function lit(){
+		document.getElementById('lst').style.color= 'black';
+		document.getElementById('lst').style.fontWeight='normal';
+
+		}
+
+
+	
+
+
+
+</script>
+<body>
+	<!--1 Create a Paragraph and assign its ID. -->
+
+<br>
+	<p id="abc" onmouseover='ms()' onmouseout="mt()">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<br><br>
+	<!--4. Add a Button and assign its ID. -->
+<center>	<button id='xyz'style="background-color: skyblue;" onmouseover="mo()" onmouseout= "mso()">click Here</button></center>
+<br><br>
+
+<!--7. Create an Input-Textbox and assign its ID. -->
+<center><input id='qqq' type="text"name=""><button id='sam'style="color:navajowhite;" onclick="oc()">Text</button>
+	<br><br>
+</center>
+
+
+<!--9. Create a List with few the list-items and assign -->
+
+<ul id="lst" onmouseover='lt()' onmouseout="lit()">
+	<li>HTML</li>
+	<li>CSS</li>
+	<li>JAVASCRIPT</li>
+
+</ul>
+
+
+</body>
+
+</html>
